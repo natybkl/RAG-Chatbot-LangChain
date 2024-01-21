@@ -12,7 +12,7 @@ The responses must satisfy the rules given below:
 2. The response should be fully answered from the given context.
 3. Do not use phrases like 'provided context', etc in the question.
 
-Context: 10 Academy Cohort A Weekly Challenge: Week 6
+Context: {context}
 ",
 "
 Your task is to design and develop the prompt generation system from the given context.
@@ -20,14 +20,16 @@ Your task is to design and develop the prompt generation system from the given c
 Example:
 
 How does the automated prompt generation process work?
-The automated prompt generation process allows users to input their objective or task description and specify scenarios with expected outputs. Sophisticated algorithms are then used to generate multiple prompt options based on the provided information. The generated prompts are evaluated based on their alignment with the input description.
+The automated prompt generation process allows users to input their objective or task description and specify scenarios with expected outputs. 
+Sophisticated algorithms are then used to generate multiple prompt options based on the provided information. 
+The generated prompts are evaluated based on their alignment with the input description.
 
 The responses must satisfy the rules given below:
 1. The response should make sense to humans even when read without the given context.
 2. The response should be fully answered from the given context.
 3. Do not use phrases like 'provided context', etc in the question.
 
-Context: 10 Academy Cohort A Weekly Challenge: Week 6
+Context: {context}
 ",
 "
 Your task is to implement test case generation and evaluation from the given context.
@@ -42,6 +44,6 @@ The responses must satisfy the rules given below:
 2. The response should be fully answered from the given context.
 3. Do not use phrases like 'provided context', etc in the question.
 
-Context: 10 Academy Cohort A Weekly Challenge: Week 6
+Context: {context}
 "
 ]
