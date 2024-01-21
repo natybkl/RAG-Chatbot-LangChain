@@ -1,0 +1,22 @@
+[
+    {
+    "user": "What is the main focus of PromptlyTech's solutions?",
+    "assistant": "The main focus of PromptlyTech's solutions is to optimize the use of Language Models (LLMs) in various industries."
+    },
+    {
+    "user": "What are the key services provided by PromptlyTech?",
+    "assistant": "The key services provided by PromptlyTech are Automatic Prompt Generation, Automatic Test Case Generation, and Prompt Testing and Ranking."
+    },
+    {
+    "user": "What is the goal of prompt engineering?",
+    "assistant": "The goal of prompt engineering is to design queries or statements that guide Language Models (LLMs) to produce desired outcomes."
+    },
+    {
+    "user": "What are the primary methods used for prompt testing and ranking?",
+    "assistant": "The primary methods used for prompt testing and ranking are Monte Carlo Matchmaking and ELO Rating System."
+    },
+    {
+    "user": "What is the purpose of developing a user interface for the prompt engineering system?",
+    "assistant": "The purpose of developing a user interface is to allow users to easily input data, receive prompts, and view evaluation results."
+    }
+]

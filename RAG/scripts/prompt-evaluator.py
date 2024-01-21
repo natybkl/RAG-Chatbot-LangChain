@@ -5,8 +5,8 @@ from openai import OpenAI
 from math import exp
 import numpy as np
 from utility.env_manager import get_env_manager
-from evaluation._data_generation import get_completion
-from evaluation._data_generation import file_reader
+from scripts import prompt_generator
+
 
 env_manager = get_env_manager()
 client = OpenAI(api_key=env_manager['openai_keys']['OPENAI_API_KEY'])
@@ -20,7 +20,7 @@ def evaluate(prompt: str, user_message: str, context: str, use_test_data: bool =
     @returns classification: the classification of the hallucination.
     """
     num_test_output = str(10)
-    API_RESPONSE = get_completion(
+    API_RESPONSE = prompt_generator.get_completion(
         [
             {
                 "role": "system", 
@@ -48,8 +48,8 @@ def evaluate(prompt: str, user_message: str, context: str, use_test_data: bool =
     return classification
 
 if __name__ == "__main__":
-    context_message = file_reader("prompts/context.txt")
-    prompt_message = file_reader("prompts/generic-evaluation-prompt.txt")
+    context_message = prompt_generator.file_reader("prompts/context.txt")
+    prompt_message = prompt_generator.file_reader("prompts/generic-evaluation-prompt.txt")
     context = str(context_message)
     prompt = str(prompt_message)
     

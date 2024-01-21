@@ -1,0 +1,47 @@
+[
+"
+Your task is to understand the prompt engineering tools and concepts from the given context.
+
+Example:
+
+What are the key components of an enterprise grade RAG system?
+The key components of an enterprise grade RAG system include prompt generation, test case generation, prompt testing and ranking, and user interface development.
+
+The responses must satisfy the rules given below:
+1. The response should make sense to humans even when read without the given context.
+2. The response should be fully answered from the given context.
+3. Do not use phrases like 'provided context', etc in the question.
+
+Context: 10 Academy Cohort A Weekly Challenge: Week 6
+",
+"
+Your task is to design and develop the prompt generation system from the given context.
+
+Example:
+
+How does the automated prompt generation process work?
+The automated prompt generation process allows users to input their objective or task description and specify scenarios with expected outputs. Sophisticated algorithms are then used to generate multiple prompt options based on the provided information. The generated prompts are evaluated based on their alignment with the input description.
+
+The responses must satisfy the rules given below:
+1. The response should make sense to humans even when read without the given context.
+2. The response should be fully answered from the given context.
+3. Do not use phrases like 'provided context', etc in the question.
+
+Context: 10 Academy Cohort A Weekly Challenge: Week 6
+",
+"
+Your task is to implement test case generation and evaluation from the given context.
+
+Example:
+
+How does the automatic test case generation process work?
+The automatic test case generation process analyzes the description provided by the user and creates a set of test cases as evaluation benchmarks for the prompt candidates. These test cases simulate various scenarios to observe the performance of each prompt in different contexts. The generated test cases serve as a starting point for comprehensive evaluation and can inspire the creation of additional test cases.
+
+The responses must satisfy the rules given below:
+1. The response should make sense to humans even when read without the given context.
+2. The response should be fully answered from the given context.
+3. Do not use phrases like 'provided context', etc in the question.
+
+Context: 10 Academy Cohort A Weekly Challenge: Week 6
+"
+]

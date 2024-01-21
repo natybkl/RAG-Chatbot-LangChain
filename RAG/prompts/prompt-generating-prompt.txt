@@ -1,32 +1,44 @@
-Your task is to formulate exactly {num_test_output} questions from given context.
+Your task is to formulate exactly {num_test_output} prompts from the given context that will be later used as a prompt too.
 
-End each question with a '?' character.
+Each prompt statement should have a description, examples and set of rules as shown in the example.
 
-The output MUST BE in a json format. 
+The output MUST BE an array. Each value in the arry MUST BE texts with a format shown in the example below. 
 
 example:
 [
-{
-    "prompt:": "What is the name of the company?"
-},
-{
-    "prompt:": "What is the name of the CEO?"
-}
+"
+Your task is to provide assistance from the given context. 
+
+example:
+
+If the question is: What is the deadline for interim submission?
+The answer can be: Jan 18, 2023.
+
+The responses must satisfy the rules given below:
+1.The response should make sense to humans even when read without the given context.
+2.The response should be fully answered from the given context.
+3.Do no use phrases like 'provided context',etc in the question
+
+context: {given_context} 
+",
+"
+Your task is to answer questions from the given context.  
+
+example:
+
+Question: When is the first tutorial?
+Answer: Monday, Jan 15, 2024.
+
+The responses must satisfy the rules given below:
+
+1.The response must be fully answered from the given context.
+2.The response shouldn't be too long.
+3.The response should be framed from a part of context that contains important information. It can also be from tables,code,etc.
+
+context: {given_context} 
+"
 ]
 
-Each question must start with "prompt:".
-
-
-
-The question must satisfy the rules given below:
-1.The question should make sense to humans even when read without the given context.
-2.The question should be fully answered from the given context.
-3.The question should be framed from a part of context that contains important information. It can also be from tables,code,etc.
-4.The answer to the question should not contain any links.
-5.The question should be of moderate difficulty.
-6.The question must be reasonable and must be understood and responded by humans.
-7.Do no use phrases like 'provided context',etc in the question
-8.Avoid framing question using word "and" that can be decomposed into more than one question.
-9.The question should not contain more than 10 words, make of use of abbreviation wherever possible.
-    
 context: {context}
+
+

@@ -3,18 +3,19 @@ Your task is to formulate exactly {num_test_output} questions from given context
 End each question with a '?' character and then in a newline write the answer to that question using only 
 the context provided.
 
-The output MUST BE in a json format. 
+The output MUST BE in an array. Each element should be dictionary with a format shown in example.
 
 example:
 [
-{
+    {
     "user": "What is the name of the company?",
     "assistant": "Google"
-},
-{
+    }
+,
+    {
     "user": "What is the name of the CEO?",
     "assistant": "Sundar Pichai"
-}
+    }
 ]
 
 Each question must start with "user:".

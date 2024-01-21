@@ -92,16 +92,15 @@ def main(num_test_output: str):
 
     test_data = generate_test_data(prompt, context, num_test_output)
 
-    def save_json(test_data) -> None:
+    def save_txt(test_data) -> None:
         # Specify the file path
-        file_path = "../prompts/automatically-generated-test-prompts.json.json"
-        json_object = json.loads(test_data)
-        with open(file_path, 'w') as json_file:
-            json.dump(json_object, json_file, indent=4)
-            
-        print(f"JSON data has been saved to {file_path}")
+        file_path = "../prompts/automatically-generated-test-prompts.txt"
+        with open(file_path, 'w') as txt_file:
+            txt_file.write(test_data)
+        
+        print(f"Text data has been saved to {file_path}")
 
-    save_json(test_data)
+    save_txt(test_data)
 
     print("===========")
     print("Prompts")
