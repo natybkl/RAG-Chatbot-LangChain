@@ -1,0 +1,34 @@
+/* Reset some default styles */
+body, h1, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply styles to the navigation bar */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Apply styles to the page content */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Add more styles as needed */
