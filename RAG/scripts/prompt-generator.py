@@ -86,28 +86,28 @@ def generate_test_data(prompt: str, context: str, num_test_output: str) -> str:
     return system_msg
 
 
-def main(num_test_output: str):
+def main(num: str):
     context_message = file_reader("../prompts/context.txt")
     prompt_message = file_reader("../prompts/prompt-generating-prompt.txt")
     context = str(context_message)
     prompt = str(prompt_message)
 
-    test_data = generate_test_data(prompt, context, num_test_output)
+    generate_prompts = generate_test_data(prompt, context, num)
 
-    def save_txt(test_data) -> None:
+    def save_txt(generate_prompts) -> None:
         # Specify the file path
         file_path = "../prompts/automatically-generated-prompts.txt"
         with open(file_path, 'w') as txt_file:
-            txt_file.write(test_data)
+            txt_file.write(generate_prompts)
         
         print(f"Text data has been saved to {file_path}")
 
-    save_txt(test_data)
+    save_txt(generate_prompts)
 
     print("===========")
     print("Prompts")
     print("===========")
-    print(test_data)
+    print(generate_prompts)
 
 
 if __name__ == "__main__":

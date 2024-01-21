@@ -69,16 +69,6 @@ def test_prompts():
 
     # Define LLM
     llm = ChatOpenAI(model_name="gpt-3.5-turbo-16k", temperature=0)
-    
-    # Define prompt template
-    template = """You are an assistant for question-answering tasks. 
-    Use the following pieces of retrieved context to answer the question. 
-    If you don't know the answer, just say that you don't know. 
-    Use two sentences maximum and keep the answer concise.
-    Question: {question} 
-    Context: {context} 
-    Answer:
-    """
 
     final_prompts = []
 
@@ -133,4 +123,7 @@ def test_prompts():
             ],
         )
 
-        df = result.to_pandas()
+        return result
+    
+if __name__ == "__main__":
+    test_prompts()
