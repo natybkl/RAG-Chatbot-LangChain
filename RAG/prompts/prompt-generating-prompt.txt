@@ -1,0 +1,44 @@
+Your task is to formulate exactly {num_test_output} prompts from the given context that will be later used as a prompt too.
+
+Each prompt statement should have a description, examples and set of rules as shown in the example.
+
+The output MUST BE an array. Each value in the arry MUST BE texts with a format shown in the example below. 
+
+example:
+[
+"
+Your task is to provide assistance from the given context. 
+
+example:
+
+If the question is: What is the deadline for interim submission?
+The answer can be: Jan 18, 2023.
+
+The responses must satisfy the rules given below:
+1.The response should make sense to humans even when read without the given context.
+2.The response should be fully answered from the given context.
+3.Do no use phrases like 'provided context',etc in the question
+
+context: {given_context} 
+",
+"
+Your task is to answer questions from the given context.  
+
+example:
+
+Question: When is the first tutorial?
+Answer: Monday, Jan 15, 2024.
+
+The responses must satisfy the rules given below:
+
+1.The response must be fully answered from the given context.
+2.The response shouldn't be too long.
+3.The response should be framed from a part of context that contains important information. It can also be from tables,code,etc.
+
+context: {given_context} 
+"
+]
+
+context: {context}
+
+
