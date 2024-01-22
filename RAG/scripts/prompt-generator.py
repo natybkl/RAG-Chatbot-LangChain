@@ -9,7 +9,7 @@ load_dotenv()
 
 
 openai_api_key = os.getenv("OPENAI_API_KEY") 
-vectordb_keys = os.getenv("VECTORDB_MODEL") 
+vectordb_keys = os.getenv("OPENAI_MODEL") 
 # print("Here:>>>" + str(openai_api_key))
 # os.environ["OPENAI_API_KEY"] = openai_api_key
 # os.environ["VECTORDB_MODEL"] = vectordb_keys

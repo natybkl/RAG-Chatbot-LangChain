@@ -9,14 +9,14 @@ load_dotenv()
 
 
 openai_api_key = os.getenv("OPENAI_API_KEY") 
-vectordb_keys = os.getenv("VECTORDB_MODEL") 
+model = os.getenv("OPENAI_MODEL") 
 
 client = OpenAI(api_key=openai_api_key)
 
 
 def get_completion(
     messages: list[dict[str, str]],
-    model: str = vectordb_keys,
+    model: str = model,
     max_tokens=500,
     temperature=0,
     stop=None,
@@ -75,7 +75,7 @@ def generate_test_data(prompt: str, context: str, num_test_output: str) -> str:
                 "content": prompt.replace("{context}", context).replace("{num_test_output}", num_test_output)
             }
         ],
-        model=vectordb_keys,
+        model=model,
         logprobs=True,
         top_logprobs=1,
     )
@@ -109,4 +109,4 @@ def main(num_test_output: str):
 
 
 if __name__ == "__main__":
-    main("5") # n number of prompts to generate
+    main("3") # n number of prompts to generate

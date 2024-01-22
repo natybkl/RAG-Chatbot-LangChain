@@ -71,7 +71,7 @@ def test_prompts():
     llm = ChatOpenAI(model_name="gpt-3.5-turbo-16k", temperature=0)
 
     final_prompts = []
-
+    prompt_accuracy = []
     for prompt in prompts:
        final_prompts.append(ChatPromptTemplate.from_template(prompt))
 
@@ -123,10 +123,10 @@ def test_prompts():
             ],
         )
 
-        df = result.to_pandas()
-        print(df)
-        
-        return result
+        prompt_accuracy.append(result["answer_relevancy"])
+
+
+    return prompt_accuracy
     
 if __name__ == "__main__":
     test_prompts()
