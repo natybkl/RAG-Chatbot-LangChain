@@ -100,7 +100,7 @@ def main(num: str):
         with open(file_path, 'w') as txt_file:
             txt_file.write(generate_prompts)
         
-        print(f"Text data has been saved to {file_path}")
+        print(f"Generated Prompts have been saved to {file_path}")
 
     save_txt(generate_prompts)
 

@@ -123,6 +123,9 @@ def test_prompts():
             ],
         )
 
+        df = result.to_pandas()
+        print(df)
+        
         return result
     
 if __name__ == "__main__":
